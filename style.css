@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Pridi", serif;
+  color: white;
+}
+
+main {
+  background-image: url(assets/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+}
+
+.container-left {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 120px;
+  gap: 14px;
+}
+
+.container-left h1 {
+  font-size: 60px;
+}
+
+.container-right {
+  background-color: rgb(102, 61, 169);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 120px;
+}
+
+.teste-gratis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 460px;
+  height: 40px;
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.teste-gratis p {
+  text-align: center;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
