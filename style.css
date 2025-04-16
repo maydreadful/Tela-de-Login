@@ -9,10 +9,11 @@
 
 main {
   background-image: url(assets/Sem\ nome\ \(1440\ x\ 1024\ px\).jpg);
-  background-repeat: no-repeat;
+  background-repeat: no-repeat center center;
   background-size: cover;
   display: flex;
   height: 100vh;
+  z-index: 0;
 }
 
 .container-left {
@@ -26,14 +27,32 @@ main {
 
 .container-left h1 {
   font-size: 60px;
+
+  &:hover::after {
+    content:""; 
+    position: absolute;
+    border: none ;
+    bottom: 380px;
+    height: 3px;
+    left: 120px;
+    background-color: blueviolet;
+    opacity:0.9;
+    width: 400px;
+    animation-name: left-To-right;
+    animation-duration: 600ms;
+    animation-iteration-count: 1;
+   transition: ease-in;
+    
+  }
 }
 
 .container-right {
-  background-color: rgb(102, 61, 169);
+  background: #363333;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 23%, rgb(65, 71, 74) 43%, rgb(125, 118, 118) 77%);
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 40px 120px;
+  padding: 0px 60px;
 }
 
 .teste-gratis {
@@ -44,12 +63,12 @@ main {
   width: 100%;
   max-width: 460px;
   height: 40px;
-  background-color: black;
+  background-color: rgb(32, 29, 29);
   text-decoration: none;
   color: white;
   border-radius: 10px;
   margin-bottom: 20px;
-}
+  }
 
 .forms {
   display: flex;
@@ -67,12 +86,11 @@ form {
   width: 100%;
 }
 
-
 label p {
   margin-bottom: 6px;
 }
 
-input[type="text"],
+input[type="text" ],
 input[type="email"],
 input[type="password"] {
   padding: 10px;
@@ -82,9 +100,27 @@ input[type="password"] {
   color: #000;
 }
 
+/*
+.forms button{
+margin-top: 20px;
+border-radius: 10px;
+padding: 10px 50px;
+background-color: #171515;
+color: white;
+align-self: center;
+width: 40%;
+border: 0;
+box-shadow: 1px 0.2px 0.5px black;
+font-weight: 600;
+transition-duration: 500ms;
+
+}
+*/
+
 button {
+  margin-top: 20px;
   padding: 12px;
-  background-color: #222;
+  background-color: #171515;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -95,12 +131,14 @@ button p {
   text-align: center;
 }
 
+
 .checkbox-group {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 14px;
 }
+  
 
 .checkbox-group input[type="checkbox"] {
   width: auto;
@@ -111,18 +149,11 @@ button p {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  main {
-    flex-direction: column;
-    height: auto;
+@keyframes left-to-right {
+  0% {
+    width: 0;
   }
-
-  .container-left,
-  .container-right {
-    padding: 20px;
+  100% {
+    width: 400px;
   }
-
-  .container-left h1 {
-    font-size: 36px;
-  }
-} 
+}
