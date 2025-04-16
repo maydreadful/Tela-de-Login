@@ -35,14 +35,14 @@ main {
     bottom: 380px;
     height: 3px;
     left: 120px;
-    background-color: blueviolet;
+
+    background-color: rgb(235, 8, 8);
     opacity:0.9;
     width: 400px;
     animation-name: left-To-right;
     animation-duration: 600ms;
     animation-iteration-count: 1;
-   transition: ease-in;
-    
+    transition: ease-in;
   }
 }
 
